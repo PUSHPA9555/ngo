@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate-Charity</title>
+    <link rel="icon" type="image/png" href="images/logo.png" style="border-radius: 50%">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .qr-section {
+            display: none;
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .qr-section img {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(123, 47, 242, 0.10);
+            margin-bottom: 10px;
+        }
+
+        .qr-section .qr-note {
+            color: #7b2ff2;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!-- Hero image at the top -->
+        <div class="hero-image-container position-relative">
+            <img src="images/donate.jpg" alt="Hero" class="img-fluid w-100" style="height: 600px; object-fit: cover;">
+            <div class="hero-text">
+                <h1>Support Our Mission</h1><br>
+                <p class="text-right">Your donation can change lives. Choose a category and make a difference today!</p>
+            </div>
+        </div>
+        <!-- navbar start -->
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top custom-navbar shadow-sm">
+                    <div class="container">
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <img src="images/logo.png" alt="Logo" class="rounded-circle mr-2"
+                                style="height: 50px; width: 50px;">
+                            <span class="brand-text">Yadav <strong>Foundation</strong></span>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="about.html">About Us</a>
+                                </li>
+                                <!-- <li class="nav-item active">
+                                    <a class="nav-link" href="teams.html">Our Team</a>
+                                </li> -->
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="donate.html">Donate Now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- navbar end -->
+
+        <!-- Donation Categories Info -->
+        <div class="container my-5">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100  border-0" id="nutriton">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#7b2ff2;">Education</h5>
+                            <p class="card-text">Help us provide books, uniforms, and scholarships to underprivileged
+                                children and youth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100   border-0" id="nutriton">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#f357a8;">Healthcare</h5>
+                            <p class="card-text">Support free health camps, medical checkups, and essential medicines
+                                for families in need.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100   border-0" id="nutriton">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#28a745;">Nutrition</h5>
+                            <p class="card-text">Contribute to our nutrition drives for children, pregnant women, and
+                                the elderly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100   border-0" id="nutriton">
+                        <div class="card-body">
+                            <h5 class="card-title" style="color:#ff9800;">Women Empowerment</h5>
+                            <p class="card-text">Empower women and girls through skill development and menstrual hygiene
+                                programs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- donation page start -->
+        <div class="row donate-section align-items-center" style="margin: 10px; height: 400px;">
+            <div class="col-sm-12">
+                <div class="donate-content text-center">
+                    <p class="donate-title mb-2">GIVE US A HAND</p>
+                    <h1 class="donate-heading mb-4">Support us and change the course of a child's life today!</h1>
+                    <a href="donate.html"
+                        class="btn btn-light btn-lg font-weight-bold px-5 py-3 rounded-pill donate-btn">Donate Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- donation page end -->
+        <!-- Donation Form -->
+        <div class="container my-5" id="myModel">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0 p-4">
+                        <h2 class="mb-4 text-center" style="color:#7b2ff2;">Make a Donation</h2>
+                        <form id="donationForm" autocomplete="off">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" name="name" placeholder="Full Name" required
+                                        id="nameInput">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" name="email"
+                                        placeholder="Email eg.emal@gmail.com" required id="emailInput">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="tel" class="form-control" name="phone"
+                                        placeholder="Phone Number 7549xxx25" required id="mobileInput">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select class="form-control" name="category" required id="selectInput">
+                                        <option value="">Select Donation Category</option>
+                                        <option value="education">Education</option>
+                                        <option value="healthcare">Healthcare</option>
+                                        <option value="nutrition">Nutrition</option>
+                                        <option value="women">Women Empowerment</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="donationAmount" name="amount"
+                                    placeholder="Donation Amount more than 500" min="1" required id="donateInput">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="3" placeholder="Message (optional)"
+                                    id="messageInput"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-block"
+                                style="background: linear-gradient(135deg, #7b2ff2 60%, #f357a8 100%); color: #fff; font-weight: bold; border-radius: 30px;">Donate
+                                Now</button>
+                        </form>
+                    
+
+                        <div class="qr-section" id="qrSection">
+                            <img id="qrImg" src="" alt="Scan to Pay QR Code">
+                            <div class="qr-note">
+                                Scan this QR code with your UPI app to donate to Yadav Foundation.<br>
+                                <span id="qrAmountText"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Donation Form -->
+        <!-- footer start -->
+        <div class="row" style="margin: 10px;">
+            <div class="col-sm-12">
+                <footer class="main-footer-unique mt-5">
+                    <div class="footer-wave"></div>
+                    <div class="container text-center py-5">
+                        <div class="footer-logo mb-3">
+                            <img src="images/logo.png" alt="NGO Logo"
+                                style="height: 60px; border-radius: 50%; background: #fff; padding: 6px;">
+                        </div>
+                        <h2 class="footer-brand mb-2">Yadav <span>Foundation</span></h2>
+                        <p class="footer-motto mb-4">Empowering communities, changing lives.</p>
+                        <div class="footer-links mb-3">
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About</a>
+                            <a href="projects.html">Projects</a>
+                            <a href="donate.html">Donate</a>
+                            <a href="contact.html">Contact</a>
+                        </div>
+                        <div class="footer-social mb-3">
+                            <a href="https://www.facebook.com/profile.php?id=100088303016914" title="Facebook"
+                                class="footer-social-icon" target="_blank" rel="noopener noreferrer"><img
+                                    src="images/facebook.png" alt="Facebook" /></a>
+                            <a href="https://github.com/ErMayankYadav2007" title="GitHub" class="footer-social-icon"
+                                target="_blank" rel="noopener noreferrer"><img src="images/github.png"
+                                    alt="GitHub" /></a>
+                            <a href="https://www.instagram.com/mayankYadav5930/?hl=en" title="Instagram"
+                                class="footer-social-icon" target="_blank" rel="noopener noreferrer"><img
+                                    src="images/instagram.png" alt="Instagram" /></a>
+
+                            <a href="https://www.linkedin.com/in/mayank-Yadav-1229242a1/" title="Linkedin"
+                                class="footer-social-icon " target="_blank" rel="noopener noreferrer"><img
+                                    src="images/linkedin.png" alt="Linkedin" /></a>
+                        </div>
+                        <p class="footer-copyright mb-0">
+                            &copy; 2026 <b>Yadav Foundation</b>. All rights reserved.
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- footer end -->
+
+    </div>
+
+    <!-- up arrow to go to the top of the page  -->
+    <a href="about.html" class="go-top-btn" id="goTopBtn" title="Go to top">⬆</a>
+    <!-- script.js file -->
+    <script src="script.js"></script>
+
+        <script>
+// Show/hide scroll-to-top button
+const goTopBtn = document.getElementById("goTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        goTopBtn.style.display = "block";
+        goTopBtn.style.opacity = "1";
+    } else {
+        goTopBtn.style.opacity = "0";
+        setTimeout(() => {
+            goTopBtn.style.display = "none";
+        }, 300);
+    }
+});
+
+// Smooth scroll to top
+goTopBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const hideAfterScroll = setInterval(() => {
+        if (window.scrollY === 0) {
+            goTopBtn.style.opacity = "0";
+            setTimeout(() => {
+                goTopBtn.style.display = "none";
+            }, 300);
+            clearInterval(hideAfterScroll);
+        }
+    }, 100);
+});
+
+
+ 
+
+</script>
+</body>
+
+</html>

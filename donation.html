@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO-Dashboard</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" type="image/png" href="images/logo.png" style="border-radius: 50%">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        h1 {
+            border-bottom: 2px solid #28a745;
+            font-weight: bold;
+        }
+
+        .list button {
+            position: absolute;
+            right: 60px;
+            top: 5%;
+            text-decoration: none;
+            border-bottom: none;
+            background: greenyellow;
+            width: 100px;
+            height: 35px;
+            padding: 3px;
+            text-align: center;
+            border-radius: 8px;
+            color: black;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.3s ease-in-out;
+        }
+
+        .list button:hover {
+            background: rgb(21, 56, 56);
+            color: aliceblue;
+            transform: translateY(-5px);
+        }
+
+        #admin a {
+            color: green;
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: none;
+            font-size: large;
+            border: none;
+            color: black;
+        }
+
+        #admin a:hover {
+            color: green;
+        }
+
+        #dash {
+            font-size: large;
+            font-weight: bold;  
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-0 mt-4">
+        <div class="row" style="margin: 10px;">
+            <div class="col-sm-12">
+                <h1>Dashboard</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" id="admin"><a href="dashboard.html">Back</a></li>
+                        <li class="breadcrumb-item active text-danger " aria-current="page" id="dash"><a href="donation.html" style="text-decoration: none;">Donation</a></li>
+                        <!-- <li class="list"><button id="logoutBtn">Logout</button></li> -->
+
+                    </ol>
+                </nav>
+
+            </div>
+        </div>
+        <!-- table start -->
+        <div class="row p-0" style="margin: 10px;">
+            <div class="col-sm-12">
+                <div id="donationDataTable" class="my-4"></div>
+
+            </div>
+        </div>
+        <!-- table end -->
+    </div>
+
+    <script src="script.js"></script>
+        <script>
+// Show/hide scroll-to-top button
+const goTopBtn = document.getElementById("goTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        goTopBtn.style.display = "block";
+        goTopBtn.style.opacity = "1";
+    } else {
+        goTopBtn.style.opacity = "0";
+        setTimeout(() => {
+            goTopBtn.style.display = "none";
+        }, 300);
+    }
+});
+
+// Smooth scroll to top
+goTopBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const hideAfterScroll = setInterval(() => {
+        if (window.scrollY === 0) {
+            goTopBtn.style.opacity = "0";
+            setTimeout(() => {
+                goTopBtn.style.display = "none";
+            }, 300);
+            clearInterval(hideAfterScroll);
+        }
+    }, 100);
+});
+
+
+ 
+
+</script>
+</body>
+
+</html>

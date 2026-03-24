@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Charity</title>
+    <!-- ...existing code... -->
+    <link rel="icon" type="image/png" href="images/logo.png" style="border-radius: 50%">
+    <!-- ...existing code... -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!-- Hero image at the top -->
+        <div class="hero-image-container position-relative">
+            <img src="images/contact.jpg" alt="Hero" class="img-fluid w-100" style="height: 600px; object-fit: cover;">
+            <div class="hero-text">
+                <h1 style="font-size: 50px; font-weight: bold; margin-bottom: 200px; border-bottom: 12px red;">Contact
+                    US
+                </h1>
+            </div>
+        </div>
+        <!-- navbar start -->
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="navbar navbar-expand-md navbar-dark fixed-top custom-navbar shadow-sm">
+                    <div class="container">
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <img src="images/logo.png" alt="Logo" class="rounded-circle mr-2"
+                                style="height: 50px; width: 50px;">
+                            <span class="brand-text">Yadav <strong>Foundation</strong></span>
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="about.html">About Us</a>
+                                </li>
+                                <!-- <li class="nav-item active">
+                                    <a class="nav-link" href="teams.html">Our Team</a>
+                                </li> -->
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="donate.html">Donate Now</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+        <!-- navbar end -->
+        <!-- contact card start -->
+       <div class="row contact-section-custom align-items-stretch" style="margin: 30px 10px 40px 10px;">
+    <div class="col-md-6 mb-4 mb-md-0">
+        <div class="contact-info-card h-100 d-flex flex-column justify-content-center align-items-center text-center p-4">
+            <h2 class="mb-4" style=" color: black; font-weight: 700;">Get in Touch</h2>
+            <p class="mb-3"><i class="bi bi-geo-alt" style=" font-size:1.3rem;"></i> <b>Address:</b> 123 Fifth Avenue, New York, NY 10160</p>
+            <p class="mb-3"><i class="bi bi-envelope" style=" font-size:1.3rem;"></i> <b>Email:</b> contact@info.com</p>
+            <p class="mb-3"><i class="bi bi-telephone" style=" font-size:1.3rem;"></i> <b>Phone:</b> 929-242-6868</p>
+            <div class="contact-social mt-3">
+                <a href="#" class="mr-2" title="Facebook"><i class="bi bi-facebook" style="font-size:1.5rem; "></i></a>
+                <a href="#" class="mr-2" title="Instagram"><i class="bi bi-instagram" style="font-size:1.5rem;"></i></a>
+                <a href="#" title="Twitter"><i class="bi bi-twitter" style="font-size:1.5rem; "></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="contact-form-card h-100 p-4">
+            <h2 class="mb-4" style="color: #f357a8; font-weight: 700;">Message Us</h2>
+            <div class="model" id="myModel">
+
+                <div class="modelcontent">
+                <form id="formData">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <input type="text"  id="nameInput" class="form-control" required placeholder="Enter Your Name">
+                    </div>
+ 
+                </div>
+
+                <div class="form-group">
+                    <input type="tel"  id="mobileInput" class="form-control" required placeholder="Mobile">
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="emailInput" class="form-control" required placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <textarea   id="msgInput" class="form-control" rows="4" required placeholder="Type your message..."></textarea>
+                </div>
+                <button class="btn btn-block contact-btn-custom" type="submit">Submit</button>
+            </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- contact crd end -->
+                 
+
+        <!-- map start -->
+         <div class="row" style="margin: 10px;">
+            <div class="col-sm-12">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28465.110556541516!2d80.9500672!3d26.8990891!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e6dad7510baa1%3A0x2bbd88ebcc05d9a1!2sAilay%20Rd%2C%20Bihar%20821106!5e0!3m2!1sen!2sin!4v1756417580492!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+         </div>
+        <!-- map end -->
+
+         <!-- donation page start -->
+        <div class="row donate-section align-items-center" style="margin: 10px; height: 400px;">
+            <div class="col-sm-12">
+                <div class="donate-content text-center">
+                    <p class="donate-title mb-2">GIVE US A HAND</p>
+                    <h1 class="donate-heading mb-4">Support us and change the course of a child's life today!</h1>
+                    <a href="donate.html"
+                        class="btn btn-light btn-lg font-weight-bold px-5 py-3 rounded-pill donate-btn">Donate Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- donation page end -->
+
+          <!-- footer start -->
+<footer class="main-footer-unique mt-5">
+    <div class="footer-wave"></div>
+    <div class="container text-center py-5">
+        <div class="footer-logo mb-3">
+            <img src="images/logo.png" alt="NGO Logo" style="height: 60px; border-radius: 50%; background: #fff; padding: 6px;">
+        </div>
+        <h2 class="footer-brand mb-2">Yadav <span>Foundation</span></h2>
+        <p class="footer-motto mb-4">Empowering communities, changing lives.</p>
+        <div class="footer-links mb-3">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="donate.html">Donate</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-social mb-3">
+            <a href="https://www.facebook.com/profile.php?id=100088303016914" title="Facebook" class="footer-social-icon" target="_blank" rel="noopener noreferrer"><img src="images/facebook.png" alt="Facebook" /></a>
+            <a href="https://github.com/ErMayankYadav2007" title="GitHub" class="footer-social-icon" target="_blank" rel="noopener noreferrer"><img src="images/github.png" alt="GitHub" /></a>
+            <a href="https://www.instagram.com/mayankYadav5930/?hl=en" title="Instagram" class="footer-social-icon" target="_blank" rel="noopener noreferrer"><img src="images/instagram.png" alt="Instagram" /></a>
+
+             <a href="https://www.linkedin.com/in/mayank-Yadav-1229242a1/" title="Linkedin" class="footer-social-icon " target="_blank" rel="noopener noreferrer"><img src="images/linkedin.png" alt="Linkedin" /></a>
+        </div>
+        <p class="footer-copyright mb-0">
+            &copy; 2026 <b>Yadav Foundation</b>. All rights reserved.
+        </p>
+    </div>
+</footer>
+    </div>
+    <!-- up arrow to go to the top of the page  -->
+    <a href="about.html" class="go-top-btn" id="goTopBtn" title="Go to top">⬆</a>
+<!-- script.js file -->
+ <!-- <script src="script.js"></script> -->
+ <script>
+ 
+ 
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formData");
+    const nameInput = document.getElementById("nameInput");
+    const emailInput = document.getElementById("emailInput");
+    const mobileInput = document.getElementById("mobileInput");
+    const msgInput = document.getElementById("msgInput");
+
+    let client = JSON.parse(localStorage.getItem("client")) || [];
+
+    function saveData() {
+        localStorage.setItem("client", JSON.stringify(client));
+    }
+
+    form.onsubmit = (e) => {
+        e.preventDefault();
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const mobile = mobileInput.value.trim();
+        const message = msgInput.value.trim();
+
+        if (name && email && mobile && message) {
+            client.push({
+                name: name,
+                email: email,
+                mobile: mobile,
+                message: message
+            });
+
+            saveData();
+
+            Swal.fire({
+                icon: "success",
+                title: "Form Submitted",
+                text: "Thanks for contacting us!",
+                showConfirmButton: true
+            }).then(() => {
+                window.location.href = "index.html";
+            });
+        }
+    };
+});
+</script>
+
+
+ 
+     <script>
+// Show/hide scroll-to-top button
+const goTopBtn = document.getElementById("goTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        goTopBtn.style.display = "block";
+        goTopBtn.style.opacity = "1";
+    } else {
+        goTopBtn.style.opacity = "0";
+        setTimeout(() => {
+            goTopBtn.style.display = "none";
+        }, 300);
+    }
+});
+
+// Smooth scroll to top
+goTopBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const hideAfterScroll = setInterval(() => {
+        if (window.scrollY === 0) {
+            goTopBtn.style.opacity = "0";
+            setTimeout(() => {
+                goTopBtn.style.display = "none";
+            }, 300);
+            clearInterval(hideAfterScroll);
+        }
+    }, 100);
+});
+
+ 
+
+</script>
+</body>
+
+</html>
